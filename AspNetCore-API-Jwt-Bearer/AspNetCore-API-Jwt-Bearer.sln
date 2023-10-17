@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore-API-Jwt-Bearer", "AspNetCore-API-Jwt-Bearer.csproj", "{A5257E55-222C-4E70-B3BF-48C99538B76D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore-Mvc-Jwt-Bearer", "..\AspNetCore-Mvc-Jwt-Bearer\AspNetCore-Mvc-Jwt-Bearer.csproj", "{E8910388-7859-43E1-9A8D-6D063C6FF752}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5257E55-222C-4E70-B3BF-48C99538B76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5257E55-222C-4E70-B3BF-48C99538B76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5257E55-222C-4E70-B3BF-48C99538B76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5257E55-222C-4E70-B3BF-48C99538B76D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8910388-7859-43E1-9A8D-6D063C6FF752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8910388-7859-43E1-9A8D-6D063C6FF752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8910388-7859-43E1-9A8D-6D063C6FF752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8910388-7859-43E1-9A8D-6D063C6FF752}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {055D4ADB-6FCB-4056-9B92-6E795CD8CB89}
+	EndGlobalSection
+EndGlobal
