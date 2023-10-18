@@ -49,11 +49,7 @@ namespace AspNetCore_API_Jwt_Bearer.StartExtensions
 
             }).AddEntityFrameworkStores<BearerDbContext>();
 
-            service.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = "Identity"; // Kimlik doğrulama şeması
-                options.DefaultChallengeScheme = "Identity"; // Kimlik doğrulama başarısız olduğunda kullanılacak şema
-            });
+
 
 
 
