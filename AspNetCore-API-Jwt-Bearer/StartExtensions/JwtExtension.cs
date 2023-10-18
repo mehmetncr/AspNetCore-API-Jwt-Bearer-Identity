@@ -2,6 +2,7 @@
 using AspNetCore_API_Jwt_Bearer.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
@@ -17,6 +18,7 @@ namespace AspNetCore_API_Jwt_Bearer.StartExtensions
             var secretKey = jwtDefaults["secretKey"]; //içinden secretKey i almak için
             service.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
             {
+              
                 opt.RequireHttpsMetadata = false;
                 opt.TokenValidationParameters = new TokenValidationParameters
                 {
@@ -55,6 +57,12 @@ namespace AspNetCore_API_Jwt_Bearer.StartExtensions
 
 
 
+            service.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            });
 
 
 

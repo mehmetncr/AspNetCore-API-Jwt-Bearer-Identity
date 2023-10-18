@@ -18,7 +18,7 @@ namespace AspNetCore_API_Jwt_Bearer.Controllers
         }
       
         [HttpGet]
-        [Authorize( Roles = "Admin")]
+        [Authorize(AuthenticationSchemes ="Bearer", Roles = "Admin")]
         public IActionResult GetEmpoyees()
         {
             return Ok(_employeeService.GetAll());

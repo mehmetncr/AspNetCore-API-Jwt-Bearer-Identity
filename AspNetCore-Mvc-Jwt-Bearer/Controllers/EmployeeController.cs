@@ -22,7 +22,7 @@ namespace AspNetCore_Mvc_Jwt_Bearer.Controllers
             var token = HttpContext.Session.GetString("token");
             var http = _httpClientFactory.CreateClient();
             //istekte bulunurken token  header içinde gönderir
-            http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(JwtBearerDefaults.AuthenticationScheme,token);
+             http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(JwtBearerDefaults.AuthenticationScheme,token);
             var respons = await http.GetAsync("https://localhost:7214/api/Employees");  //API adresi ve get isteği 
             var code = respons.StatusCode;
             if (respons.StatusCode == System.Net.HttpStatusCode.OK)  //gelen sonuç Ok ise  kodu ise
