@@ -16,6 +16,27 @@ In this project, which shows how to ensure the token-based security of the proje
 Firstly, the person must be a member of the system. Membership checks are carried out using Identity. Users who are members can log in to the system and if the login process is successful, they get tokens to access the pages. The generated tokens are stored in the session and sent to the API by adding them to the header section of the request every time the person makes a request. In the API, the incoming request is token checked and if the match is successful, the response is generated.
 
 
+## Kullanılan Teknolojiler / Used technologies
+
+- Asp .NET Core C#
+
+- Kastrel, IIS Express
+
+- MS-SQL Server
+
+- Entity Fremawork Core
+
+- Identity Authorization
+
+- Json Web Token Bearer Authorization
+
+- Generic Repository
+
+- Unit Of Work
+
+- LINQ
+
+
 ## API Kullanımı /API Usage
 
 #### Kayıt ol / Register
