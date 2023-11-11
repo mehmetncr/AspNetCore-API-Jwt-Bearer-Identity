@@ -4,16 +4,17 @@ TR->
 
 Jwt Bearer kullanarak projenin token bazlı güvenliğinin nasıl sağlanacağını gösteren bu projede;
 
-Öncelikle kişinin sisteme üye olması gerekmektedir. Identity kullanarak üyelik denetimleri yapılmaktadır.
-Üye olan kulanıcılar sisteme login olabilirler ve login işlemi başarılı olursa sayfalara ulaşmak için token sahibi olurlar.
-Üretilen tokenlar session'da saklanarak kişinin her rquest işleminde requestinin header bölmüne eklenerek API'ya gönderilir.
-API'da gelen requestin token kontrolu yapılır ve eşleşme başarılı ise response oluşturulur.
+Projenin temeli, kullanıcıların sisteme üye olmaları ve bu üyeliklerin Identity kullanarak denetim altına alınması üzerine kurulmuştur. Üye olan kullanıcılar sisteme giriş yaparak, başarılı bir oturum açma işlemi sonucunda sayfalara ulaşmak için bir token alırlar. Bu tokenlar, oturum süresince session içinde saklanır ve her request işlemi sırasında, kullanıcının request header bölümüne eklenerek API'ya gönderilir.
+API tarafında, gelen requestin token kontrolü yapılır ve eğer eşleşme başarılı ise ilgili işlemler gerçekleştirilir ve bir response oluşturulur. Bu sayede, sadece doğrulanan kullanıcılar ve geçerli token'lara sahip olanlar sistemdeki sayfalara erişebilir.
+Proje, WT Bearer kullanarak token yönetimi sayesinde güvenlik açısından sağlam bir yapı sunar.
+
 
 EN->
 
 In this project, which shows how to ensure the token-based security of the project using Jwt Bearer;
 
-Firstly, the person must be a member of the system. Membership checks are carried out using Identity. Users who are members can log in to the system and if the login process is successful, they get tokens to access the pages. The generated tokens are stored in the session and sent to the API by adding them to the header section of the request every time the person makes a request. In the API, the incoming request is token checked and if the match is successful, the response is generated.
+The foundation of the project relies on users becoming system members and managing these memberships using Identity. Once users who are members log into the system, they receive a token upon successful login to access the pages. These tokens are stored in the session throughout its duration and are sent to the API by adding them to the user's request header section during each request operation.
+On the API side, incoming requests undergo token checks, and if the match is successful, relevant operations are executed, generating a response. This ensures that only verified users with valid tokens can access the pages in the system. The project provides a robust security structure through token management using WT Bearer.
 
 
 ## Kullanılan Teknolojiler / Used technologies
